@@ -1,0 +1,485 @@
+{
+    "games": {
+
+        "game1": {
+            "id": 1,
+            "title": "50-dragons-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game2": {
+            "id": 2,
+            "title": "88-fortune-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game3": {
+            "id": 3,
+            "title": "aloha-sw-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game4": {
+            "id": 4,
+            "title": "amazon-queen-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game5": {
+            "id": 5,
+            "title": "avalon-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game6": {
+            "id": 6,
+            "title": "bar-bar-black-sheep-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game7": {
+            "id": 7,
+            "title": "big-foot-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game8": {
+            "id": 8,
+            "title": "blackjack-perfect-pairs-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game9": {
+            "id": 9,
+            "title": "call-of-the-wild-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game10": {
+            "id": 10,
+            "title": "cats-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game11": {
+            "id": 11,
+            "title": "champion-raceway-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game12": {
+            "id": 12,
+            "title": "coyote-moon-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game13": {
+            "id": 13,
+            "title": "crystals-of-power-sw-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game14": {
+            "id": 14,
+            "title": "danger-high-voltage-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game15": {
+            "id": 15,
+            "title": "dazzle-me-sw-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game16": {
+            "id": 16,
+            "title": "divine-fortune-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game17": {
+            "id": 17,
+            "title": "doctor-love-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game18": {
+            "id": 18,
+            "title": "dolphin-gold-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game19": {
+            "id": 19,
+            "title": "doubleplay-superbet-slots",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game20": {
+            "id": 20,
+            "title": "dragon-born",
+            "link": "sample",
+            "type": "slots"
+        },
+        "game21": {
+            "id": 21,
+            "title": "dragon-emperor",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game22": {
+            "id": 22,
+            "title": "dragon-story-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game23": {
+            "id": 23,
+            "title": "drive-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game24": {
+            "id": 24,
+            "title": "flowers-sw-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game25": {
+            "id": 25,
+            "title": "fortunes-of-sparta-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game26": {
+            "id": 26,
+            "title": "foxin-wins-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game27": {
+            "id": 27,
+            "title": "fruit-shop-christmas-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game28": {
+            "id": 28,
+            "title": "fruit-shop-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game29": {
+            "id": 29,
+            "title": "glow-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game30": {
+            "id": 30,
+            "title": "gold-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game31": {
+            "id": 31,
+            "title": "gorilla-go-wild-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game32": {
+            "id": 32,
+            "title": "grand-monarch-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game33": {
+            "id": 33,
+            "title": "great-wild-elk-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game34": {
+            "id": 34,
+            "title": "guns-n-roses-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game35": {
+            "id": 35,
+            "title": "hansel-and-gretel-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game36": {
+            "id": 36,
+            "title": "hot-cross-bunnies-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game37": {
+            "id": 37,
+            "title": "isle-o-plenty-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game38": {
+            "id": 38,
+            "title": "jack-and-the-beanstalk-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game39": {
+            "id": 39,
+            "title": "jack-hammer-2-sw-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game40": {
+            "id": 40,
+            "title": "jack-hammer-sw-slots",
+            "link": "sample",
+            "type": "classic slots"
+        },
+        "game41": {
+            "id": 41,
+            "title": "jackpot-jester-wild-nudge-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game42": {
+            "id": 42,
+            "title": "kingdom-of-wealth-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game43": {
+            "id": 43,
+            "title": "king-kong-cash-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game44": {
+            "id": 44,
+            "title": "king-of-slots-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game45": {
+            "id": 45,
+            "title": "kitty-glitter-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game46": {
+            "id": 46,
+            "title": "koi-princess-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game47": {
+            "id": 47,
+            "title": "lights-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game48": {
+            "id": 48,
+            "title": "lucky-tree-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game49": {
+            "id": 49,
+            "title": "master-of-mystery-sw-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game50": {
+            "id": 50,
+            "title": "medieval-money-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game51": {
+            "id": 51,
+            "title": "megajackpots-siberian-storm-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game52": {
+            "id": 52,
+            "title": "megajackpots-wolf-run-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game53": {
+            "id": 53,
+            "title": "mermaids-millions-sw-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game54": {
+            "id": 54,
+            "title": "miss-kitty-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game55": {
+            "id": 55,
+            "title": "montezuma-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game56": {
+            "id": 56,
+            "title": "motorhead-sw-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game57": {
+            "id": 57,
+            "title": "pharaohs-fortune-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game58": {
+            "id": 58,
+            "title": "piggy-riches-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game59": {
+            "id": 59,
+            "title": "raging-rhino-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game60": {
+            "id": 60,
+            "title": "rainbow-riches-reels-of-gold-slots",
+            "link": "sample",
+            "type": "live casino"
+        },
+        "game61": {
+            "id": 61,
+            "title": "red-riding-hood-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game62": {
+            "id": 62,
+            "title": "reel-rush-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game63": {
+            "id": 63,
+            "title": "robin-hood-prince-of-tweets-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game64": {
+            "id": 64,
+            "title": "shamrock-n-roll-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game65": {
+            "id": 65,
+            "title": "shangri-la-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game66": {
+            "id": 66,
+            "title": "silver-lion-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game67": {
+            "id": 67,
+            "title": "spartacus-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game68": {
+            "id": 68,
+            "title": "spinata-sw-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game69": {
+            "id": 69,
+            "title": "steam-tower-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game70": {
+            "id": 70,
+            "title": "super-diamond-deluxe-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game71": {
+            "id": 71,
+            "title": "the-green-lantern-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game72": {
+            "id": 72,
+            "title": "thunderstruck-ii-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game73": {
+            "id": 73,
+            "title": "thunderstruck-ii-sw-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game74": {
+            "id": 74,
+            "title": "titan-storm-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game75": {
+            "id": 75,
+            "title": "twinspin-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game76": {
+            "id": 76,
+            "title": "volcano-eruption-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game77": {
+            "id": 77,
+            "title": "when-pigs-fly-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game78": {
+            "id": 78,
+            "title": "wild-toro-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game79": {
+            "id": 79,
+            "title": "winstar-slots",
+            "link": "sample",
+            "type": "table game"
+        },
+        "game80": {
+            "id": 80,
+            "title": "zeus-3-slots",
+            "link": "sample",
+            "type": "table game"
+        }
+    }
+}

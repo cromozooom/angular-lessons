@@ -7,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NavComponent implements OnInit {
-	private menuitem1: string;
-	private menuitem2: string;
-	private menuitem3: string;
-	private menuitem4: string;
+	menuitem1: string;
+	menuitem2: string;
+	menuitem3: string;
+	menuitem4: string;
 	
-	private menuitemLink1: string;
-	private menuitemLink2: string;
-	private menuitemLink3: string;
-	private menuitemLink4: string;
+	menuitemLink1: string;
+	menuitemLink2: string;
+	menuitemLink3: string;
+	menuitemLink4: string;
 
 
 	constructor() {
