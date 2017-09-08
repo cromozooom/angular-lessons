@@ -9,6 +9,7 @@ import { PageHomeComponent } from './page-home/page-home.component';
 import { PageAboutComponent } from './page-about/page-about.component';
 import { PageProjectComponent } from './page-project/page-project.component';
 import { PagePhotoComponent } from './page-photo/page-photo.component';
+import { AboutModule } from './page-about/page-about.module';
 
 import { routing } from './app.routing';
 
@@ -23,6 +24,7 @@ import { routing } from './app.routing';
   ],
   imports: [
     BrowserModule,
+    AboutModule,
     routing
   ],
   providers: [],
