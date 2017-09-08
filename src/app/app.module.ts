@@ -4,18 +4,22 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { PageAboutComponent } from './page-about/page-about.component';
-import { PageHomeComponent } from './page-home/page-home.component';
 import { NavComponent } from './nav/nav.component';
+import { PageHomeComponent } from './page-home/page-home.component';
+import { PageAboutComponent } from './page-about/page-about.component';
+import { PageProjectComponent } from './page-project/page-project.component';
+import { PagePhotoComponent } from './page-photo/page-photo.component';
 
 import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavComponent,
     PageHomeComponent,
     PageAboutComponent,
-    NavComponent
+    PageProjectComponent,
+    PagePhotoComponent
   ],
   imports: [
     BrowserModule,
