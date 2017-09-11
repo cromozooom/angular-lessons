@@ -2,6 +2,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpModule } from '@angular/http';
+
 import { AppComponent } from './app.component';
 
 import { NavComponent } from './nav/nav.component';
@@ -10,6 +12,10 @@ import { PageAboutComponent } from './page-about/page-about.component';
 import { PageProjectComponent } from './page-project/page-project.component';
 import { PagePhotoComponent } from './page-photo/page-photo.component';
 import { AboutModule } from './page-about/page-about.module';
+
+//import {HttpClientModule} from '@angular/common/http';
+
+import { GameService } from './services/games.service';
 
 import { routing } from './app.routing';
 
@@ -24,10 +30,14 @@ import { routing } from './app.routing';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     AboutModule,
-    routing
+    routing,
+    //HttpClientModule
   ],
-  providers: [],
+  providers: [
+    GameService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
