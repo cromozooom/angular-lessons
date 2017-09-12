@@ -11,5 +11,4 @@ export class PageHomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

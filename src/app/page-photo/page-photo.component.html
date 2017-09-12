@@ -1,8 +1,13 @@
 <h1>
-  page-photo works!
+	page-photo works!
 </h1>
 
-<ul>
-  <li *ngFor="let game of games">{{game.id}} {{game.title}}</li>
+<ul class="list-unstyled d-flex flex-wrap gameGrid">
+	<li class="list-inline-item text-center" *ngFor="let game of games">
+		<img class="img-fluid" src="assets/images/cover/cover_{{game.title}}.jpg" alt= "{{game.title}} - {{game.type}}">
+		<p>
+			{{game.id}} {{game.title}}
+		</p>
+	</li>
 </ul>
 

@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { GameService } from "../services/games.service";
-
-
-
+import { JsonService } from "../services/json.service";
 
 @Component({
   selector: 'app-page-photo',
@@ -11,21 +7,18 @@ import { GameService } from "../services/games.service";
   styleUrls: ['./page-photo.component.scss']
 })
 
-
 export class PagePhotoComponent implements OnInit {
-
-
+  
+  // declaring variable
   games;
-
-
-  constructor(private gameService: GameService) {
+  //typeOfGame;
+  typeOfGame = 'slots';
+  
+  // using the game service
+  constructor(private jsonService: JsonService) {
   }
-
 
   ngOnInit() {
-
-    this.gameService.getGames().subscribe(p=> this.games = p);
-
+    this.jsonService.getJson('../assets/covers.json').subscribe(p => this.games = p.filter(a => a.type == this.typeOfGame));
   }
-
 }

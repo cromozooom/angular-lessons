@@ -15,7 +15,7 @@ import { AboutModule } from './page-about/page-about.module';
 
 //import {HttpClientModule} from '@angular/common/http';
 
-import { GameService } from './services/games.service';
+import { JsonService } from './services/json.service';
 
 import { routing } from './app.routing';
 
@@ -36,7 +36,7 @@ import { routing } from './app.routing';
     //HttpClientModule
   ],
   providers: [
-    GameService
+    JsonService
   ],
   bootstrap: [AppComponent]
 })

@@ -4,12 +4,12 @@ import { Observable } from 'rxjs/Rx';
 
 
 @Injectable()
-export class GameService {
-    constructor(private http: Http) {
-    }
+export class JsonService {
+    
+    constructor(private http: Http) {}
 
-    getGames(): Observable<any> {
-        return this.http.get("../../assets/covers.json")
+    getJson(url): Observable<any> {
+        return this.http.get(url)
             .map((res: Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
