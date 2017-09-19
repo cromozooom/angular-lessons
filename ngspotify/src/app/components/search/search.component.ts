@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SpotifyService } from '../../services/spotify.service';
-
+import {Http, Headers} from '@angular/http';
 
 @Component({
 	moduleId:module.id,
@@ -9,17 +9,16 @@ import { SpotifyService } from '../../services/spotify.service';
 })
 export class SearchComponent {
 	searchStr:string;
-	authToken: string;
 	
 	constructor(private _spotifyService:SpotifyService){
-
 	}
 
 	searchMusic(){
-		this._spotifyService.searchMusic(
-			this.searchStr,
-			this.authToken).subscribe(res=> {
-				console.log(res);
+		this._spotifyService
+			.searchMusic(this.searchStr)
+			.subscribe(res=> {console.log(res);
 		});
+		console.log(Headers);
 	}
+
 }
