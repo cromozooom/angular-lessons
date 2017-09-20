@@ -1,6 +1,44 @@
-<ul>
+<div *ngIf="businesses">
+	<div *ngIf="appState == 'extend'">
+		<button class="btn" (click)="changeState('default')">go back</button>
+		<div *ngFor="let business of businesses">
+
+			<div *ngIf="business.$key == activeKey">
+				<div>{{business.company}}</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		
+		<table>
+			<thead>
+				<tr>
+					<th>Company</th>
+					<th>Category</th>
+					<th>Phone</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let business of businesses">
+					<td>{{business.company}}</td>
+					<td>{{business.category}}</td>
+					<td>{{business.phone}}</td>
+					<td>
+						<button (click)="changeState('extend', business.$key)" class="btn">More</button>
+						<button class="btn">Edit</button>
+						<button class="btn">Edit</button>
+					</td>
+					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<!--ul>
 	<li class="text"  *ngFor="let business of businesses">
 		{{business.company}}
 	</li>
-</ul>
+</ul-->
 
