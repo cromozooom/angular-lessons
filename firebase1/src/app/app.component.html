@@ -1,38 +1,367 @@
-<div *ngIf="businesses">
-	<div *ngIf="appState == 'extend'">
-		<button class="btn" (click)="changeState('default')">go back</button>
-		<div *ngFor="let business of businesses">
+<div class="container-fluid">
+	<div class="container">
+		<div class="row py-2">
+			<div class="col">
+				<button class="btn btn-success" (click)="changeState('add')">Add Business</button>
+			</div>
+			<div class="col text-right" *ngIf="categories">
+				<div class="form-group">
+					<label>Filter category
+						<select (change)="filterCategory(filteredCategory.value)" #filteredCategory class="form-control">
+							<option value="0">Select</option>
+							<option value="all">All</option>
+							<option *ngFor="let category of categories" value="{{category.name}}">{{category.name}}</option>
+						</select>
+					</label>
+				</div>
+			</div>
+						
+		</div>
+		<div class="row">
+			<div class="col">
+				<!--ADD business FORM-->
+				<div *ngIf="appState == 'add'">
+					<h3>{{appState}} Business</h3>
+					<form (submit)="addBusiness(
+						company.value,
+						category.value,
+						years_in_business.value,
+						description.value,
+						street_address.value,
+						city.value,
+						zipcode.value,
+						state.value,
+						email.value,
+						phone.value
+						)">
+						<div class="row">
+							<div class="col">
+								<label for="" class="form-control-label"> company</label>
+								<input type="text" class="form-control" placeholder="Company name" #company>
+							</div>
+							<div class="col">
+								<label for="" class="form-control-label"> category</label>
+								<select class="form-control" #category>
+									<option *ngFor="let category of categories" value="{{category.name}}">{{category.name}}</option>
+								</select>
+								<!--input type="text" class="form-control" placeholder= "company category" -->
+							</div>
+						</div>	
+						<div class="row">
+							<div class="col">
+								<label for="" class="form-control-label"> Description</label>
+								<input type="text" class="form-control" placeholder="company description" #description>
+							</div>
+							<div class="col">
+								<label for="" class="form-control-label"> Years in business</label>
+								<input type="text" class="form-control" placeholder= "company years_in_business" #years_in_business>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<label for="" class="form-control-label"> Street address</label>
+								<input type="text" class="form-control" placeholder= "company street_address" #street_address>
+							</div>
+							<div class="col">
+								<label for="" class="form-control-label"> City</label>
+								<input type="text" class="form-control" placeholder= "company city" #city>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<label for="" class="form-control-label"> Email</label>
+								<input type="text" class="form-control" placeholder= "company email" #email>
+							</div>
+							<div class="col">
+								<label for="" class="form-control-label"> phone</label>
+								<input type="text" class="form-control" placeholder= "company phone" #phone>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<label for="" class="form-control-label"> Zipcode</label>
+								<input type="text" class="form-control" placeholder= "company zipcode" #zipcode>
+							</div>
+							<div class="col">
+								<label for="" class="form-control-label"> State</label>
+								<input type="text" class="form-control" placeholder= "company state" #state>
+							</div>
+						</div>
+						<div class="row mt-4">
+							<div class="col">
+								<input type="submit" class="btn btn-success" value="Submit">
+							</div>
+						</div>
+					</form>
+					<hr>
+				</div>
 
-			<div *ngIf="business.$key == activeKey">
-				<div>{{business.company}}</div>
+				<!--EDIT business FORM-->
+				<!--div *ngIf="appState == 'edit'">
+					<h3>{{appState}} Business</h3>
+					<form (submit)="updateBusiness()">
+						<div class="row">
+							<div class="col">
+								<label for="" class="form-control-label"> company</label>
+								<input [(ngModel)]="activeCompany" name="activeCompany" type="text" class="form-control" placeholder="Company name" #company>
+							</div>
+							<div class="col">
+								<label for="" class="form-control-label"> category</label>
+								<select [(ngModel)]="activeCategory" name="activeCategory" class="form-control" #category>
+									<option *ngFor="let category of categories" value="{{category.name}}">{{category.name}}</option>
+								</select>
+							</div>
+						</div>	
+						<div class="row">
+							<div class="col">
+								<label for="" class="form-control-label"> Description</label>
+								<input [(ngModel)]="activeDescription" name="activeDescription" type="text" class="form-control" placeholder="company description" #description>
+							</div>
+							<div class="col">
+								<label for="" class="form-control-label"> Years in business</label>
+								<input [(ngModel)]="activeYearsInBusiness" name="activeYearsInBusiness" type="text" class="form-control" placeholder= "company years_in_business" #years_in_business>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<label for="" class="form-control-label"> Street address</label>
+								<input [(ngModel)]="activeStreetAddress" name="activeStreetAddress" type="text" class="form-control" placeholder= "company street_address" #street_address>
+							</div>
+							<div class="col">
+								<label for="" class="form-control-label"> City</label>
+								<input [(ngModel)]="activeCity" name="activeCity" type="text" class="form-control" placeholder= "company city" #city>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<label for="" class="form-control-label"> Email</label>
+								<input [(ngModel)]="activeEmail" name="activeEmail" type="text" class="form-control" placeholder= "company email" #email>
+							</div>
+							<div class="col">
+								<label for="" class="form-control-label"> phone</label>
+								<input [(ngModel)]="activePhone" name="activePhone" type="text" class="form-control" placeholder= "company phone" #phone>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<label for="" class="form-control-label"> Zipcode</label>
+								<input [(ngModel)]="activeZipcode" name="activeZipcode" type="text" class="form-control" placeholder= "company zipcode" #zipcode>
+							</div>
+							<div class="col">
+								<label for="" class="form-control-label"> State</label>
+								<input [(ngModel)]="activeState" name="activeState" type="text" class="form-control" placeholder= "company state" #state>
+							</div>
+						</div>
+						<div class="row mt-4">
+							<div class="col">
+								<input type="submit" class="btn btn-success" value="Update">
+							</div>
+						</div>
+					</form>
+					<hr>
+				</div-->
+
+
+
+				<!--div *ngIf="appState == 'extend'">
+					<button class="btn  btn-primary" (click)="changeState('default')">Close</button>
+					<div *ngFor="let business of businesses">
+						
+						<div *ngIf="business.$key == activeKey">
+							<h3>{{business.company}}</h3>
+						</div>
+					</div>
+				</div-->
+				<div *ngIf="businesses">	
+					<table class="w-100 table">
+						<thead>
+							<tr class="m-0 p-0">
+								<th class="m-0 p-0">
+									<table class="w-100 mb-0 table">
+										<thead class="thead-inverse">
+											<th class="w-25">Company</th>
+											<th class="w-25">Category</th>
+											<th class="w-25">Phone</th>
+											<th class="w-25"></th>
+										</thead>
+									</table>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let business of businesses">
+								<td class="m-0 p-0">
+									<table class="w-100 table">
+										<tr>
+											<td class="w-25"><strong>{{business.company}}</strong></td>
+											<td class="w-25">{{business.category}}</td>
+											<td class="w-25">{{business.phone}}</td>
+											<td class="text-right w-25">
+												<div class="btn-group" role="group">
+													<button (click)="changeState('extend', business.$key)" class="btn btn-primary">More</button>
+													<button (click)="showEdit(business)"  class="btn btn-outline-primary">Edit</button>
+													<button class="btn btn-outline-danger">Delete</button>
+												</div>
+											</td>
+										</tr>
+
+										<!-- DETAILS -->
+										<tr *ngIf="business.$key == activeKey && appState == 'extend'" class="p-0">
+											<td colspan="4">
+												<div class="d-flex justify-content-between">
+													<div>
+														<div *ngIf="business.$key == activeKey">
+															<h3>{{business.company}}</h3>
+														</div>
+													</div>
+													<button class="btn btn-outline-primary" (click)="changeState('default')">
+														Close
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="">
+													<dl class="row">
+														<dt class="col-sm-3">
+															description
+														</dt>
+														<dd class="col-sm-9">
+															{{business.description}},
+														</dd>
+														<dt class="col-sm-3">
+															category
+														</dt>
+														<dd class="col-sm-9">
+															{{business.category}},
+														</dd>
+														<dt class="col-sm-3">
+															years in business
+														</dt>
+														<dd class="col-sm-9">
+															{{business.years_in_business}},
+														</dd>
+														<dt class="col-sm-3">
+															address
+														</dt>
+														<dd class="col-sm-9">
+															{{business.street_address}},
+														</dd>
+														<dt class="col-sm-3">
+															city
+														</dt>
+														<dd class="col-sm-9">
+															{{business.city}},
+														</dd>
+														<dt class="col-sm-3">
+															zipcode
+														</dt>
+														<dd class="col-sm-9">
+															{{business.zipcode}},
+														</dd>
+														<dt class="col-sm-3">
+															state
+														</dt>
+														<dd class="col-sm-9">
+															{{business.state}},
+														</dd>
+														<dt class="col-sm-3">
+															email
+														</dt>
+														<dd class="col-sm-9">
+															{{business.email}},
+														</dd>
+														<dt class="col-sm-3">
+															phone
+														</dt>
+														<dd class="col-sm-9">
+															{{business.phone}}
+														</dd>
+													</dl>
+												</div>
+											</td>
+										</tr>
+
+
+										<!--EDIT business FORM-->
+										<tr *ngIf="business.$key == activeKey || appState == 'edit'" class="p-0">
+										<!--tr *ngIf="appState == 'edit'"-->
+											<td colspan="4">
+												<div class="d-flex justify-content-between">
+													<h3>Edit {{activeCompany}}</h3>
+													<button class="btn btn-outline-primary" (click)="changeState('default')">
+														Close
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<form (submit)="updateBusiness()">
+													<div class="row">
+														<div class="col">
+															<label for="" class="form-control-label"> company</label>
+															<input [(ngModel)]="activeCompany" name="activeCompany" type="text" class="form-control" placeholder="Company name" #company>
+														</div>
+														<div class="col">
+															<label for="" class="form-control-label"> category</label>
+															<select [(ngModel)]="activeCategory" name="activeCategory" class="form-control" #category>
+																<option *ngFor="let category of categories" value="{{category.name}}">{{category.name}}</option>
+															</select>
+															<!--input type="text" class="form-control" placeholder= "company category" -->
+														</div>
+													</div>	
+													<div class="row">
+														<div class="col">
+															<label for="" class="form-control-label"> Description</label>
+															<input [(ngModel)]="activeDescription" name="activeDescription" type="text" class="form-control" placeholder="company description" #description>
+														</div>
+														<div class="col">
+															<label for="" class="form-control-label"> Years in business</label>
+															<input [(ngModel)]="activeYearsInBusiness" name="activeYearsInBusiness" type="text" class="form-control" placeholder= "company years_in_business" #years_in_business>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<label for="" class="form-control-label"> Street address</label>
+															<input [(ngModel)]="activeStreetAddress" name="activeStreetAddress" type="text" class="form-control" placeholder= "company street_address" #street_address>
+														</div>
+														<div class="col">
+															<label for="" class="form-control-label"> City</label>
+															<input [(ngModel)]="activeCity" name="activeCity" type="text" class="form-control" placeholder= "company city" #city>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<label for="" class="form-control-label"> Email</label>
+															<input [(ngModel)]="activeEmail" name="activeEmail" type="text" class="form-control" placeholder= "company email" #email>
+														</div>
+														<div class="col">
+															<label for="" class="form-control-label"> phone</label>
+															<input [(ngModel)]="activePhone" name="activePhone" type="text" class="form-control" placeholder= "company phone" #phone>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col">
+															<label for="" class="form-control-label"> Zipcode</label>
+															<input [(ngModel)]="activeZipcode" name="activeZipcode" type="text" class="form-control" placeholder= "company zipcode" #zipcode>
+														</div>
+														<div class="col">
+															<label for="" class="form-control-label"> State</label>
+															<input [(ngModel)]="activeState" name="activeState" type="text" class="form-control" placeholder= "company state" #state>
+														</div>
+													</div>
+													<div class="row mt-4">
+														<div class="col">
+															<input type="submit" class="btn btn-success" value="Update">
+														</div>
+													</div>
+												</form>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="container">
-		
-		<table>
-			<thead>
-				<tr>
-					<th>Company</th>
-					<th>Category</th>
-					<th>Phone</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor="let business of businesses">
-					<td>{{business.company}}</td>
-					<td>{{business.category}}</td>
-					<td>{{business.phone}}</td>
-					<td>
-						<button (click)="changeState('extend', business.$key)" class="btn">More</button>
-						<button class="btn">Edit</button>
-						<button class="btn">Edit</button>
-					</td>
-					
-				</tr>
-			</tbody>
-		</table>
 	</div>
 </div>
 
