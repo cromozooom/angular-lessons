@@ -25,7 +25,7 @@ export class AppComponent implements OnInit{
 	activeStreetAddress: string;
 	activeCity: string;
 	activeZipcode: string;
-	activeState: string;
+	activeBState: string;
 	activeEmail: string;
 	activePhone: string;
 
@@ -46,6 +46,7 @@ export class AppComponent implements OnInit{
 			this.activeKey = key;
 		}
 		this.appState = state
+		console.log(state)
 	}
 	filterCategory(category){
 		console.log(category)
@@ -62,7 +63,7 @@ export class AppComponent implements OnInit{
 		street_address: string,
 		city: string,
 		zipcode: string,
-		state: string,
+		bstate: string,
 		email: string,
 		phone: string
 	){
@@ -76,7 +77,7 @@ export class AppComponent implements OnInit{
 			street_address: street_address,
 			city: city,
 			zipcode: zipcode,
-			state: state,
+			bstate: bstate,
 			email: email,
 			phone: phone,
 			create_at: create_at
@@ -101,7 +102,7 @@ export class AppComponent implements OnInit{
 		this.activeStreetAddress 	= business.street_address;
 		this.activeCity 			= business.city;
 		this.activeZipcode 			= business.zipcode;
-		this.activeState 			= business.state;
+		this.activeBState 			= business.bstate;
 		this.activeEmail 			= business.email;
 		this.activePhone 			= business.phone;
 
@@ -111,16 +112,16 @@ export class AppComponent implements OnInit{
 	updateBusiness(){
 		console.log("update - app-components");
 		var updBusiness = {
-			company: 		this.activeCompany,
-			description: 	this.activeDescription,
-			category: 		this.activeCategory,
-			years_in_business: this.activeYearsInBusiness,
+			company: 			this.activeCompany,
+			description: 		this.activeDescription,
+			category: 			this.activeCategory,
+			years_in_business: 	this.activeYearsInBusiness,
 			street_address: 	this.activeStreetAddress,
-			city: 			this.activeCity,
-			zipcode: 		this.activeZipcode,
-			state: 			this.activeState,
-			email: 			this.activeEmail,
-			phone: 			this.activePhone
+			city: 				this.activeCity,
+			zipcode: 			this.activeZipcode,
+			state: 				this.activeBState,
+			email: 				this.activeEmail,
+			phone: 				this.activePhone
 		}
 
 		this._firebaseService.updateBusiness(this.activeKey, updBusiness);

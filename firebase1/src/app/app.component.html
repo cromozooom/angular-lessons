@@ -30,7 +30,7 @@
 						street_address.value,
 						city.value,
 						zipcode.value,
-						state.value,
+						bstate.value,
 						email.value,
 						phone.value
 						)">
@@ -84,7 +84,7 @@
 							</div>
 							<div class="col">
 								<label for="" class="form-control-label"> State</label>
-								<input type="text" class="form-control" placeholder= "company state" #state>
+								<input type="text" class="form-control" placeholder= "company state" #bstate>
 							</div>
 						</div>
 						<div class="row mt-4">
@@ -261,7 +261,7 @@
 															state
 														</dt>
 														<dd class="col-sm-9">
-															{{business.state}},
+															{{business.bstate}},
 														</dd>
 														<dt class="col-sm-3">
 															email
@@ -343,7 +343,7 @@
 														</div>
 														<div class="col">
 															<label for="" class="form-control-label"> State</label>
-															<input [(ngModel)]="activeState" name="activeState" type="text" class="form-control" placeholder= "company state" #state>
+															<input [(ngModel)]="activeBState" name="activeBState" type="text" class="form-control" placeholder= "company state" #bstate>
 														</div>
 													</div>
 													<div class="row mt-4">
