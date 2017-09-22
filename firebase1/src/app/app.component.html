@@ -198,7 +198,7 @@
 											<td class="w-25">{{business.phone}}</td>
 											<td class="text-right w-25">
 												<div class="btn-group" role="group">
-													<button (click)="changeState('extend', business.$key)" class="btn btn-primary">More</button>
+													<button (click)="changeState('view', business.$key)" class="btn btn-primary">More</button>
 													<button (click)="showEdit(business)"  class="btn btn-outline-primary">Edit</button>
 													<button class="btn btn-outline-danger">Delete</button>
 												</div>
@@ -206,7 +206,7 @@
 										</tr>
 
 										<!-- DETAILS -->
-										<tr *ngIf="business.$key == activeKey && appState == 'extend'" class="p-0">
+										<tr *ngIf="business.$key == activeKey && appState == 'view'" class="p-0">
 											<td colspan="4">
 												<div class="d-flex justify-content-between">
 													<div>
@@ -282,7 +282,7 @@
 
 
 										<!--EDIT business FORM-->
-										<tr *ngIf="business.$key == activeKey || appState == 'edit'" class="p-0">
+										<tr *ngIf="business.$key == activeKey && appState == 'edit'" class="p-0">
 										<!--tr *ngIf="appState == 'edit'"-->
 											<td colspan="4">
 												<div class="d-flex justify-content-between">

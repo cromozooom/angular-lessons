@@ -91,7 +91,7 @@ export class AppComponent implements OnInit{
 	}
 
 	showEdit(business){
-		console.log("show edit");
+		//console.log("show edit");
 		
 		this.changeState('edit', business.k$ey);
 
@@ -106,7 +106,7 @@ export class AppComponent implements OnInit{
 		this.activeEmail 			= business.email;
 		this.activePhone 			= business.phone;
 
-		this.changeState('default', '0');
+		//this.changeState('default', '0');
 	}
 
 	updateBusiness(){
